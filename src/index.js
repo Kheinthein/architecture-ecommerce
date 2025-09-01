@@ -1,7 +1,7 @@
 import express from 'express';
-import { router as cartRouter } from './cart.js';
-import { router as ordersRouter } from './orders.js';
-import { router as productsRouter } from './products.js';
+import { router as cartRoutes } from './routes/cartRoutes.js';
+import { router as orderRoutes } from './routes/orderRoutes.js';
+import { router as productRoutes } from './routes/productRoutes.js';
 
 const app = express();
 const PORT = 3000;
@@ -15,9 +15,9 @@ app.get('/', (req, res) => {
 });
 
 // Montage des routes
-app.use('/products', productsRouter);
-app.use('/cart', cartRouter);
-app.use('/orders', ordersRouter);
+app.use('/products', productRoutes);
+app.use('/cart', cartRoutes);
+app.use('/orders', orderRoutes);
 
 
 app.use('*', (req, res) => {
