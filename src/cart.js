@@ -38,6 +38,7 @@ router.post('/', (req, res) => {
 
   res.json({ message: 'Produit ajouté au panier' });
 });
+//PUT pour modifier le panier
 
 // Vide le panier
 
