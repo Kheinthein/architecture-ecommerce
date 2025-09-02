@@ -1,7 +1,7 @@
 // Service métier : Ajouter au panier
-import { CartRepositoryInMemory } from '../../data/memory/CartRepositoryInMemory.js';
+import { RepositoryFactory } from '../../data/RepositoryFactory.js';
 
-const cartRepository = new CartRepositoryInMemory();
+const cartRepository = RepositoryFactory.createCartRepository();
 
 export const execute = (productId, quantity) => {
   // Validation

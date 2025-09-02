@@ -1,7 +1,7 @@
 // Service métier : Vider le panier
-import { CartRepositoryInMemory } from '../../data/memory/CartRepositoryInMemory.js';
+import { RepositoryFactory } from '../../data/RepositoryFactory.js';
 
-const cartRepository = new CartRepositoryInMemory();
+const cartRepository = RepositoryFactory.createCartRepository();
 
 export const execute = () => {
   cartRepository.clearCart();

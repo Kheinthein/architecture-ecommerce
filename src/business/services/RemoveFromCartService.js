@@ -1,7 +1,7 @@
 // Service métier : Retirer du panier
-import { CartRepositoryInMemory } from '../../data/memory/CartRepositoryInMemory.js';
+import { RepositoryFactory } from '../../data/RepositoryFactory.js';
 
-const cartRepository = new CartRepositoryInMemory();
+const cartRepository = RepositoryFactory.createCartRepository();
 
 export const execute = (productId) => {
   if (!productId || typeof productId !== 'number' || productId <= 0) {

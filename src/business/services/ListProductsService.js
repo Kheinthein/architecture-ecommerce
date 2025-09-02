@@ -1,7 +1,7 @@
 // Service métier : Lister les produits
-import { ProductRepositoryInMemory } from '../../data/memory/ProductRepositoryInMemory.js';
+import { RepositoryFactory } from '../../data/RepositoryFactory.js';
 
-const productRepository = new ProductRepositoryInMemory();
+const productRepository = RepositoryFactory.createProductRepository();
 
 export const execute = () => {
   return productRepository.findAll();

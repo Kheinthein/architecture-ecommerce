@@ -13,9 +13,11 @@
     "test:unit": "jest tests/unit",
     "test:integration": "jest tests/integration",
     "test:verbose": "jest --verbose",
-    "test:silent": "jest --silent"
+    "test:silent": "jest --silent",
+    "db:reset": "node scripts/db-reset-sqlite.js"
   },
   "dependencies": {
+    "better-sqlite3": "^12.2.0",
     "express": "^4.19.2"
   },
   "engines": {

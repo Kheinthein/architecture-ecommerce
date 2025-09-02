@@ -1,7 +1,7 @@
 // Service métier : Lister les commandes
-import { OrderRepositoryInMemory } from '../../data/memory/OrderRepositoryInMemory.js';
+import { RepositoryFactory } from '../../data/RepositoryFactory.js';
 
-const orderRepository = new OrderRepositoryInMemory();
+const orderRepository = RepositoryFactory.createOrderRepository();
 
 export const execute = () => {
   return orderRepository.findAll();
