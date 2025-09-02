@@ -2,29 +2,11 @@
  * Tests d'intégration API - Architecture n-tiers
  */
 
-import express from 'express';
 import request from 'supertest';
-import { errorMiddleware } from '../../src/presentation/http/middlewares/errorMiddleware.js';
-import { router as cartRoutes } from '../../src/presentation/http/routes/cartRoutes.js';
-import { router as orderRoutes } from '../../src/presentation/http/routes/orderRoutes.js';
-import { router as productRoutes } from '../../src/presentation/http/routes/productRoutes.js';
-
-const createTestApp = () => {
-  const app = express();
-  app.use(express.json());
-  app.use('/products', productRoutes);
-  app.use('/cart', cartRoutes);
-  app.use('/orders', orderRoutes);
-  app.use(errorMiddleware);
-  return app;
-};
+import app from '../../src/presentation/http/app.js';
 
 describe('API Integration Tests', () => {
-  let app;
-
-  beforeEach(() => {
-    app = createTestApp();
-  });
+  // Utilisation directe de l'app principale
 
   describe('Products API', () => {
     test('GET /products - devrait retourner la liste des produits', async () => {
