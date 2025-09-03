@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.44% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>17/18</span>
+                <span class='fraction'>0/18</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/4</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.44% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>17/18</span>
+                <span class='fraction'>0/18</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -113,42 +113,42 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import express from 'express';
@@ -157,42 +157,42 @@ import { router as cartRoutes } from './routes/cartRoutes.js';
 import { router as orderRoutes } from './routes/orderRoutes.js';
 import { router as productRoutes } from './routes/productRoutes.js';
 &nbsp;
-const app = express();
+const app = <span class="cstat-no" title="statement not covered" >express();</span>
 &nbsp;
 // Middleware
-app.use(express.json());
+<span class="cstat-no" title="statement not covered" >app.use(express.json());</span>
 &nbsp;
 // Route d'accueil
-app.get('/', <span class="fstat-no" title="function not covered" >(r</span>eq, res) =&gt; {
+<span class="cstat-no" title="statement not covered" >app.get('/', <span class="fstat-no" title="function not covered" >(r</span>eq, res) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >  res.send('API E-commerce');</span>
 });
 &nbsp;
 // Route de test d'erreur (pour tester le middleware)
-app.get('/test-error', (req, res, next) =&gt; {
-  const error = new Error('Erreur de test pour valider le middleware');
-  error.name = 'TestError';
-  next(error); // Passer l'erreur au middleware
+<span class="cstat-no" title="statement not covered" >app.get('/test-error', <span class="fstat-no" title="function not covered" >(r</span>eq, res, next) =&gt; {</span>
+  const error = <span class="cstat-no" title="statement not covered" >new Error('Erreur de test pour valider le middleware');</span>
+<span class="cstat-no" title="statement not covered" >  error.name = 'TestError';</span>
+<span class="cstat-no" title="statement not covered" >  next(error); </span>// Passer l'erreur au middleware
 });
 &nbsp;
 // Route de test ValidationError
-app.get('/test-validation-error', (req, res, next) =&gt; {
-  const error = new Error('Données invalides');
-  error.name = 'ValidationError';
-  next(error);
+<span class="cstat-no" title="statement not covered" >app.get('/test-validation-error', <span class="fstat-no" title="function not covered" >(r</span>eq, res, next) =&gt; {</span>
+  const error = <span class="cstat-no" title="statement not covered" >new Error('Données invalides');</span>
+<span class="cstat-no" title="statement not covered" >  error.name = 'ValidationError';</span>
+<span class="cstat-no" title="statement not covered" >  next(error);</span>
 });
 &nbsp;
 // Montage des routes
-app.use('/products', productRoutes);
-app.use('/cart', cartRoutes);
-app.use('/orders', orderRoutes);
+<span class="cstat-no" title="statement not covered" >app.use('/products', productRoutes);</span>
+<span class="cstat-no" title="statement not covered" >app.use('/cart', cartRoutes);</span>
+<span class="cstat-no" title="statement not covered" >app.use('/orders', orderRoutes);</span>
 &nbsp;
 // Middleware de gestion d'erreurs 404
-app.use('*', (req, res) =&gt; {
-  res.status(404).json({ error: 'Not Found' });
+<span class="cstat-no" title="statement not covered" >app.use('*', <span class="fstat-no" title="function not covered" >(r</span>eq, res) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  res.status(404).json({ error: 'Not Found' });</span>
 });
 &nbsp;
 // Middleware de gestion d'erreurs globales
-app.use(errorMiddleware);
+<span class="cstat-no" title="statement not covered" >app.use(errorMiddleware);</span>
 &nbsp;
 // Export de l'application pour réutilisation
 export default app;</pre></td></tr></table></pre>
@@ -202,7 +202,7 @@ export default app;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-09-02T12:49:16.093Z
+                at 2025-09-02T15:19:21.413Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
